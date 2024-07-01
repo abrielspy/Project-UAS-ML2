@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logosimulasi"
+    tools:context=".SimulasiModelActivity">
+
+    <!-- Age -->
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Age"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Chest pain type -->
+    <EditText
+        android:id="@+id/chestPainType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Chest pain type"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/age"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Cholesterol -->
+    <EditText
+        android:id="@+id/cholesterol"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Cholesterol"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chestPainType"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Exercise angina -->
+    <EditText
+        android:id="@+id/exerciseAngina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Exercise angina"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cholesterol"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- ST depression -->
+    <EditText
+        android:id="@+id/stDepression"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="ST depression"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exerciseAngina"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Slope of ST -->
+    <EditText
+        android:id="@+id/slopeOfST"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Slope of ST"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stDepression"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Thallium -->
+    <EditText
+        android:id="@+id/thallium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Thallium"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/slopeOfST"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Button for action -->
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Predict"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thallium"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Result TextView -->
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/btnCheck"
+        app:layout_constraintStart_toStartOf="@id/btnCheck"
+        app:layout_constraintTop_toBottomOf="@id/btnCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
